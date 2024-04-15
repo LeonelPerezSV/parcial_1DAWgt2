@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+
+  java_app:
+    container_name: java_app
+    image: crud-java:1.0
+    build: .
+    ports:
+      - 8080:8080
+    depends_on:
+      - mariadb  # Cambiar a mariadb en lugar de java_db
+    environment:
+      DATABASE_URL: jdbc:mariadb://mariadb:5434/nombredelabasededatos
+
+  mariadb:  # Cambiar de nombre de servicio a mariadb
+    container_name: mariadb
+    image: mariadb:latest
+    ports:
+      - 5434:5434  # Cambiar el puerto a 5434 para MariaDB
+    environment:
+      MYSQL_ROOT_PASSWORD: mariadb  # Contraseña de root para MariaDB
+      MYSQL_DATABASE: mariadb  # Nombre de la base de datos para MariaDB
+      MYSQL_USER: mariadb  # Usuario de MariaDB 
+      MYSQL_PASSWORD: mariadb  # Contraseña de usuario para MariaDB
