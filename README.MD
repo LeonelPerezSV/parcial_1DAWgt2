@@ -3,7 +3,7 @@
 GRUPO 10, INTEGRANTES
 Franklin Giovanny Avila González; AG22046
 Albert Uziel Hernandez Mendoza; HM20019
-Leonel Antonio Hernández Pérez; HP12002
+Leonel Antonio Hernández Pérez; HP12002 (pruebas de despliegue y ejecucion)
 
 Este proyecto utiliza Docker Compose para ejecutar una aplicación Java junto con una base de datos MariaDB. Sigue los pasos a continuación para ejecutar el proyecto de forma correcta.
 
